@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title || "Autenticación" %></title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body class="grey lighten-4">
+    <nav class="blue">
+      <div class="nav-wrapper container">
+        <a href="/" class="brand-logo">Autenticación</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/signIn" id="navSignIn">Iniciar sesión</a></li>
+          <li><a href="/signUp" id="navSignUp">Registrarse</a></li>
+          <li><a href="/dashboard/user" id="navDashboardUser" style="display:none">Panel</a></li>
+          <li><a href="/dashboard/admin" id="navDashboardAdmin" style="display:none">Administración</a></li>
+          <li><a href="/profile" id="navProfile" style="display:none">Mi cuenta</a></li>
+          <li><a href="#" id="logoutLink" style="display:none">Salir</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container" style="margin-top: 24px">

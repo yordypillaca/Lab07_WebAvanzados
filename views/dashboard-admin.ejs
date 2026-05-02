@@ -1,0 +1,49 @@
+<%- include('partials/head', { title: 'Panel de administrador' }) %>
+
+<div class="row">
+  <div class="col s12">
+    <h5>Panel de administrador</h5>
+    <p class="grey-text">Lista de usuarios (requiere rol admin).</p>
+
+    <div id="alert" class="card-panel red lighten-4 red-text text-darken-4" style="display:none"></div>
+
+    <table class="highlight responsive-table">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Roles</th>
+          <th>Registro</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="usersTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal detalle de usuario -->
+<div id="userModal" class="modal">
+  <div class="modal-content">
+    <h5>Detalle de usuario</h5>
+    <ul class="collection">
+      <li class="collection-item"><b>Nombre:</b> <span id="mName"></span></li>
+      <li class="collection-item"><b>Apellido:</b> <span id="mLastName"></span></li>
+      <li class="collection-item"><b>Email:</b> <span id="mEmail"></span></li>
+      <li class="collection-item"><b>Teléfono:</b> <span id="mPhone"></span></li>
+      <li class="collection-item"><b>Fecha de nacimiento:</b> <span id="mBirthdate"></span></li>
+      <li class="collection-item"><b>Edad:</b> <span id="mAge"></span></li>
+      <li class="collection-item"><b>Roles:</b> <span id="mRoles"></span></li>
+      <li class="collection-item"><b>Registro:</b> <span id="mCreatedAt"></span></li>
+      <li class="collection-item"><b>URL perfil:</b> <span id="mUrl"></span></li>
+      <li class="collection-item"><b>Dirección:</b> <span id="mAddress"></span></li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+  </div>
+</div>
+
+<%- include('partials/foot', { pageScript: 'dashboardAdmin.js' }) %>
+

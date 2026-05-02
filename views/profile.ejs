@@ -1,0 +1,68 @@
+<%- include('partials/head', { title: 'Mi cuenta' }) %>
+
+<div class="row">
+  <div class="col s12">
+    <h5>Mi cuenta</h5>
+    <p class="grey-text">Actualiza tus datos. Requiere sesión.</p>
+  </div>
+
+  <div class="col s12">
+    <div id="alert" class="card-panel red lighten-4 red-text text-darken-4" style="display:none"></div>
+    <div id="success" class="card-panel green lighten-4 green-text text-darken-4" style="display:none"></div>
+  </div>
+
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Datos</span>
+        <ul class="collection">
+          <li class="collection-item"><b>Email:</b> <span id="uEmail"></span></li>
+          <li class="collection-item"><b>Roles:</b> <span id="uRoles"></span></li>
+          <li class="collection-item"><b>Edad:</b> <span id="uAge"></span></li>
+          <li class="collection-item"><b>Registro:</b> <span id="uCreated"></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Editar</span>
+        <form id="profileForm">
+          <div class="input-field">
+            <input id="name" name="name" type="text" required />
+            <label for="name">Nombre</label>
+          </div>
+          <div class="input-field">
+            <input id="lastName" name="lastName" type="text" required />
+            <label for="lastName">Apellido</label>
+          </div>
+          <div class="input-field">
+            <input id="phoneNumber" name="phoneNumber" type="text" required />
+            <label for="phoneNumber">Teléfono</label>
+          </div>
+          <div class="input-field">
+            <input id="birthdate" name="birthdate" type="date" required />
+            <label class="active" for="birthdate">Fecha de nacimiento</label>
+          </div>
+          <div class="input-field">
+            <input id="url_profile" name="url_profile" type="url" />
+            <label for="url_profile">URL de perfil</label>
+          </div>
+          <div class="input-field">
+            <input id="address" name="address" type="text" />
+            <label for="address">Dirección</label>
+          </div>
+          <button class="btn blue waves-effect waves-light" type="submit">
+            Guardar
+            <i class="material-icons right">save</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/foot', { pageScript: 'profile.js' }) %>
+
